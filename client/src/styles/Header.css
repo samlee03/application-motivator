@@ -9,18 +9,36 @@
     font-weight: 700;
 }
 
+.navigation-container {
+    display: flex;
+    gap: 16px;
+}
+
+.nav-button {
+    color: black;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none; 
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+}
+
 
 .navigation-container > * {
     border: none;
     background-color: transparent;
     font-weight: 600;
-    border-radius: 50%;
 }
 
-.Header > * > button:hover {
-    cursor: pointer;
+.profile {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
 }
-.navigation-container {
-    display: flex;
-    gap: 32px;
+.profile:hover {
+    cursor: pointer;
 }
