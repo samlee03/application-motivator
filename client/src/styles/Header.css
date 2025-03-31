@@ -1,0 +1,26 @@
+.Header {
+    height: 64px;
+    background-color: rgb(192, 192, 192);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    font-weight: 700;
+}
+
+
+.navigation-container > * {
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    border-radius: 50%;
+}
+
+.Header > * > button:hover {
+    cursor: pointer;
+}
+.navigation-container {
+    display: flex;
+    gap: 32px;
+}
