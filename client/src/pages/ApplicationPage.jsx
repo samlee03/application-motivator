@@ -4,7 +4,7 @@ const ApplicationPage = () =>  {
   return (
     <div>
 
-      <Header/>
+    <Header onPage={"Application"}/>
       <p>Application Page</p>
     </div>
   )

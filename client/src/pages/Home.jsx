@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
 
-      <Header/>
+      <Header onPage={"Home"}/>
       <p>Home Page</p>
     </div>
   )

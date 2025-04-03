@@ -1,21 +1,30 @@
+@font-face {
+    font-family: 'Monserrat-Subrayada';
+    src: url('/assets/fonts/MontserratSubrayada.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 .Header {
-    height: 64px;
-    background-color: rgb(192, 192, 192);
+    background-color: #F5F4F0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    padding: 0 20px;
+    padding: 20px 20px;
     font-weight: 700;
 }
 
 .navigation-container {
+    font-family: 'DM Sans';
     display: flex;
     gap: 16px;
 }
 
 .nav-button {
-    color: black;
+    color: #9D9D9D;
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none; 
@@ -41,4 +50,16 @@
 }
 .profile:hover {
     cursor: pointer;
+}
+
+.logo {
+    font-family: "Monserrat-Subrayada";
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+.blue{
+    color: #485E92;
+}
+.grey {
+    color: grey;
 }

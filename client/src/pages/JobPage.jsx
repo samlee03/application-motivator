@@ -3,7 +3,7 @@ import Header from '../components/Header'
 const JobPage = () => {
   return (
     <div>
-        <Header/>
+        <Header onPage={"Job"}/>
         <p>Job Page</p>
     </div>
   )
