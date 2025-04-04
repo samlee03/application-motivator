@@ -1,11 +1,15 @@
 import React from 'react'
 import Header from '../components/Header'
+import Welcome from '../components/home/Welcome'
 const Home = () => {
   return (
     <div>
 
       <Header onPage={"Home"}/>
-      <p>Home Page</p>
+      <Welcome/>
+      <p>About me section</p>
+      <p>Reviews ...</p>
+      <p>Resources ...</p>
     </div>
   )
 }
