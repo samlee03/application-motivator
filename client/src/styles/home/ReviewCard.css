@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+.ReviewCard {
+    width: 52.5%;
+    background-color: #E8E7EF;
+    display: flex;
+    gap: 20px;
+    padding: 46px;
+    border-radius: 18px;
+}
+
+.review-card-content > *, .review-card-content > * > * {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+}
+.review-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    height: 76px;
+}
+/* .review-card-name{
+    font-family: "DM Sans", sans-serif;
+} */
+
+.review-card-subtitle {
+    /* line-height: 8px; */
+    font-style: italic;
+    font-size: 20px;
+    margin-bottom: 8px;
+
+}
+
+.review-card-quote{
+    font-size: 18px;
+    color: #686868;
+    font-style: italic;
+}
+.review-card-image {
+    height: 120px;
+    border-radius: 50%;
+}
+
