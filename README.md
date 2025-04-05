@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Abstract
+
+A job board that motivates and manages job seekers applications while offering supporting resources.
+
+## Design
+
+![Motivator Design Thumbnail](https://res.cloudinary.com/doqunjdxq/image/upload/v1743876850/sicw3ogumnsrmflrdfbo.png)
+
+[Figma Link](https://www.figma.com/design/57rnsEc4MCPw1x35dgb6fU/Google-Mentorship--25?node-id=82-12&t=laAj6Gj14F5ED7hR-1)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
