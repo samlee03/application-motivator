@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+.sign-up-page {
+    background-color: #E8E7EF;
+}
+.sign-up-page > img {
+    width: 50%;
+    height: calc(100vh - 85px);
+}
+.sign-up-page {
+    display: flex;
+    font-family: 'DM Sans', sans-serif;
+    color: #373435;
+}
+.sign-up-page > div {
+    padding: 5% 7.5% 0;
+}
+
+.sign-up-page > img {
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.8);
+}
+

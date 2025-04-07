@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.sign-in-up-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-in-up-content > input {
+    width: 375px;
+    padding: 13px 20px;
+    border: none;
+    margin: 10px 0;
+}
+
+.sign-in-up-content > .heading {
+    margin:0;
+    font-size: 3rem;
+    font-family: "Days One";
+}
+
+.sign-in-up-content > h4 {
+    margin: 0 0 40px 0;
+}
+.sign-in-up-content >input:focus {
+    outline: none;
+}
+.sign-in-up-content > p, .sign-in-up-content > ul {
+    margin: 0;
+}
+.sign-in-up-content > ul > li {
+    line-height: 1.5rem;
+
+}
+

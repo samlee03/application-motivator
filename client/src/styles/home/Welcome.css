@@ -30,11 +30,14 @@
 }
 
 .get-started-btn {
+  font-size: 1.2rem;
+  text-decoration: none;
   background-color: #E9915B;
   border: none;
   padding: 20px 28px;
   border-radius: 28px;
   color: white;
+  text-shadow: none;
 }
 
 
