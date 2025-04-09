@@ -15,7 +15,8 @@
 
 .sign-in-up-content > .heading {
     margin:0;
-    font-size: 3rem;
+    font-size: 3.2rem;
+    text-wrap: wrap;
     font-family: "Days One";
 }
 
@@ -33,3 +34,26 @@
 
 }
 
+.sign-in-up-content > .orange-button {
+    width: 70%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+.sign-in-out-block {
+    height: 250px;
+    position: relative;
+}
+.remember-me {
+    position: absolute;
+    bottom: 10px;
+}
+/* .sign-in-up-content > .center {
+    width: 100px;
+} */
+
+.link {
+    color: black;
+}

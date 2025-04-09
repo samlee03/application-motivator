@@ -4,18 +4,18 @@ import "../styles/account/SignUpPage.css"
 
 import SignInOut from '../components/account/SignInOut'
 import Image from "../assets/images/account/three-people.jpg"
-const SignUpPage = () => {
+const SignInPage = () => {
   return (
     <>
       <Header />
       <div className="sign-up-page">
         <img src={Image} />
         <div>
-          <SignInOut type="sign-up"/>
+          <SignInOut type="sign-in" />
         </div>
       </div>
     </>
   )
 }
 
-export default SignUpPage
+export default SignInPage
