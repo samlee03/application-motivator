@@ -9,7 +9,7 @@ const Article = () => {
   return (
     <div className='article-section'>
         <div className='article-section-header'>
-            <Type title="Articles others found helpful"/>
+            <Type title="Recently published articles"/>
             <Type more="See more"/>
         </div>
         <div className='article-wrapper'>
