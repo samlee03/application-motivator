@@ -20,6 +20,11 @@
     margin-right: 2%;
     max-width: 25vw;
     cursor: pointer;
+}
+.video-img-wrapper{
+    position: relative;
+    display: flex;
+    background-color: #555;
     overflow: hidden;
 }
 .video-img{
@@ -27,5 +32,18 @@
     width: 100%;
 }
 .video:hover .video-img{
-    transform:scale(110%) translateY(-6px);
+    transform:scale(110%);
+}
+.play-logo{
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 100%;
+    background-color: #35353577;
+    transition: .3s ease;
+}
+.video:hover .play-logo{
+    transform:translate(-50%, -50%) scale(120%);
 }
