@@ -1,0 +1,27 @@
+.mascot_head {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.mascot-shadow {
+    position: absolute;
+    left: 64px;
+    bottom: -10px;
+}
+.mascot_sparkle1 {
+    position: absolute;
+    left: 285px;
+    top: 98px;
+}
+.mascot_sparkle2 {
+    position: absolute;
+    left: 310px;
+    top: 90px;
+}
+
+.mascot-container {
+    position: relative;
+    height: 355px;
+    width: 417px;
+}
+
