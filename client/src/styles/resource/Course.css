@@ -54,6 +54,8 @@
     letter-spacing: 2px;
     background-color: #485E92;
     transition: .3s ease;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 .course-title{
     padding: 5%;
