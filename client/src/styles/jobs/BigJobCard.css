@@ -1,0 +1,8 @@
+.big-job-card {
+    margin: 20px;
+    width: fit-content;
+}
+
+.big-job-card-description > p {
+    width: 600px;    
+}
