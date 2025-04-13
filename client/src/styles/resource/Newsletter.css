@@ -1,0 +1,58 @@
+
+.newsletter-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #E8E7EF;
+    
+    height: 60vh;
+    padding: 5%;
+    padding-top: 0%;
+    margin-top: 10%;
+}
+
+.form-section, .input-section{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.form-section{
+    font-family: "DM Sans";
+    height: 50%;
+    justify-content: space-evenly;
+}
+
+.input-section{
+    height: 50%;
+}
+.input-section input{
+    all: unset;
+    background-color: white;
+    padding:.5% 5%;
+    width: 30vw;
+    height: 40px;
+}
+.input-section .email-input{
+    margin-bottom: 2%;
+}
+
+.checkbox-wrapper{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.button-section{
+    display: flex;
+    justify-content: center;
+}
+.button-section input{
+    all: unset;
+    cursor: pointer;
+    background-color: #E9915B;
+    color: white;
+    border-radius: 100px; 
+    padding: 20px 28px;
+    width: 70px;
+    text-align: center;
+}
