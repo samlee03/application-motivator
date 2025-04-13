@@ -1,0 +1,18 @@
+.suggestion-section{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 15vh;
+    padding-right: 15vh;
+    padding-top: 2%;
+}
+
+.suggestion-button{
+    font-family: 'DM Sans';
+    font-weight: 500;
+    padding: .5% 1%;
+    background-color: #F4F3FA;
+    color: #44464F;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: #9D9D9D 2px 2px 2px;
+}

@@ -1,0 +1,31 @@
+.video-section{
+    padding-left: 15vh;
+    padding-right: 15vh;
+}
+
+.video-section-header{
+    padding-top: 10%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.video-wrapper{
+    display: flex;
+    overflow-x: auto;
+}
+.video{
+    min-width: 300px;
+    margin-right: 2%;
+    max-width: 25vw;
+    cursor: pointer;
+    overflow: hidden;
+}
+.video-img{
+    transition: .3s ease;
+    width: 100%;
+}
+.video:hover .video-img{
+    transform:scale(110%) translateY(-6px);
+}

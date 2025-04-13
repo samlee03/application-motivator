@@ -1,0 +1,24 @@
+.article-section{
+    padding-left: 15vh;
+    padding-right: 15vh;
+}
+
+.article-section-header{
+    padding-top: 10%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.article-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.article{
+    max-width: 25vw;
+}
+.article-img{
+    width: 100%;
+}
