@@ -18,7 +18,20 @@
 
 .article{
     max-width: 25vw;
+    cursor: pointer;
+}
+.article-img-wrapper{
+    position: relative;
+    display: flex;
+    overflow: hidden;
 }
 .article-img{
+    transition: .3s ease;
     width: 100%;
+}
+.article:hover .article-img{
+    transform:scale(110%);
+}
+.article:hover p{
+    text-decoration: underline;
 }

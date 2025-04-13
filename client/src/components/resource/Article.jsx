@@ -14,15 +14,21 @@ const Article = () => {
         </div>
         <div className='article-wrapper'>
             <div className='article'>
-                <img className='article-img' src={Image1} alt="Image of a recruiter examining a resume"/>
+                <div class='article-img-wrapper'>
+                    <img className='article-img' src={Image1} alt="Image of a recruiter examining a resume"/>
+                </div>
                 <Type subtitle="Craft the Perfect Resume" description="Key words to include in your resume to make it standout to hiring managers"/>
             </div>
             <div className='article'>
-                <img className='article-img' src={Image2} alt="Image of two women in an interviewing"/>
+                <div class='article-img-wrapper'>
+                    <img className='article-img' src={Image2} alt="Image of two women in an interviewing"/>
+                </div>
                 <Type subtitle="Ace Your Next Interview" description="Proven strategies to confidently answer tough interview questions"/>
             </div>
             <div className='article'>
-                <img className='article-img' src={Image3} alt="Image of two men sitting and chatting"/>
+                <div class='article-img-wrapper'>
+                    <img className='article-img' src={Image3} alt="Image of two men sitting and chatting"/>
+                </div>
                 <Type subtitle="Impact of Networking" description="Effective networking tips to sell yourself effortlessly"/>
             </div>
         </div>

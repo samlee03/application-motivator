@@ -46,3 +46,6 @@
 .video:hover .play-logo{
     transform:translate(-50%, -50%) scale(120%);
 }
+.video:hover p{
+    text-decoration: underline;
+}
