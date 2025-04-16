@@ -63,6 +63,8 @@
     gap: 4px;
     overflow-y: auto;
     scrollbar-width: none;
+    min-width: 300px;
+    width: 100%;
 }
 .job-display {
     /* flex-grow: 1; */
@@ -72,5 +74,5 @@
     /* background-color: red; */
     border-radius: 1rem;
     box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3);
-    width: fit-content;
+    /* width: fit-content; */
 }
