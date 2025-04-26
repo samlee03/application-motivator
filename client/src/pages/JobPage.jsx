@@ -7,8 +7,20 @@ import BigJobCard from '../components/jobs/BigJobCard'
 import "../styles/jobs/JobPage.css"
 const JobPage = () => {
   // const [jobs, setJobs] = useState(null)
-  const [jobs, setJobs] = useState("temp")
-  
+  const [jobs, setJobs] = useState(null);
+  const [selected, setSelected] = useState(0);
+  useEffect(() => {
+    const fetchJobs = async () => {
+      const response = await fetch('http://localhost:5000/jobs')
+      const data = await response.json();
+      setJobs(data.documents);
+    }
+    const loadingJobs = setTimeout(() =>{
+      fetchJobs();
+      console.log(jobs);
+
+    }, 500)
+  }, [])
   return (
     <div>
         <Header onPage={"Job"}/>
@@ -25,11 +37,16 @@ const JobPage = () => {
             </div>
             <div className="job-page-results">
               <div className="job-cards-container">
-                <SmallJobCard/>
-                <SmallJobCard/>
-                <SmallJobCard/>
-                <SmallJobCard/>
-                <SmallJobCard/>
+                {jobs.map((e, i) => {
+                  return (
+                    <div key={i} onClick={() => setSelected(i)}>
+                      <SmallJobCard data={e}/>
+                    </div>
+                  )
+                })}
+                {/* <div onClick={() => {console.log("clicked")}}>
+                  <SmallJobCard data={jobs[0]}/>
+                </div> */}
               </div>
               <div className="job-display">
                 <BigJobCard/>

@@ -1,14 +1,18 @@
 import React from 'react'
 import "../../styles/jobs/SmallJobCard.css"
-function SmallJobCard({props}) {
+const SmallJobCard = ({data}) => {
+  const job = data;
+  console.log(job);
   return (
     <div className="small-job-card">
         <div className="job-heading">
             <img src="https://placehold.co/400"/>
-            <h1>Software Engineer</h1>
+            <div>
+              <h1 className="small-card-title">{job.job_title}</h1>
+            </div>
         </div>
-        <p>150k - 350k, Medical 401(k) + 1 benefit</p>
-        <p>New York, United States (on-site)</p>
+        <p>{job.salary}</p>
+        <p>{job.location}</p>
     </div>  
   )
 }
