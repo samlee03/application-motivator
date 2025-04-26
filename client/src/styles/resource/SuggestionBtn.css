@@ -16,3 +16,22 @@
     cursor: pointer;
     box-shadow: #9D9D9D 2px 2px 2px;
 }
+
+.suggestion-button:hover{
+    box-shadow: #9D9D9D 1px 1px 2px;;
+}
+
+.clicked-button, .clicked-button:hover{
+    box-shadow: none;
+    background-color: #485E92;
+    color: #F5F4F0;
+}
+
+/* button filter functions */
+/* .hide-content{
+    display: none;
+}
+
+.hidden-resume-help, .hidden-interview-help, .hidden-assessment-help, .hidden-network-help{
+    display: none;
+} */

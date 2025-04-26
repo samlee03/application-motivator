@@ -5,6 +5,9 @@ import AboutUs from '../components/home/AboutUs'
 import Titles from '../components/home/Titles'
 import Review from '../components/home/Review'
 
+import Article from '../components/home/Article'
+import Newsletter from '../components/resource/Newsletter'
+
 import '../styles/home/Home.css'
 
 import Image1 from "../assets/images/brooke-cagle.jpg"
@@ -19,10 +22,9 @@ const Home = () => {
       <img className="section-image" src={Image1}/>
       <Review/>
       <Titles title="Resources" subtitle="Explore what we have to offer" />
-      <p>Resources ...</p>
+      <Article/>
       <img className="section-image" src={Image2}/>
-      <Titles title="Newsletter" subtitle="Never miss an opportunity again" />
-      <p>...</p>
+      <Newsletter/>
     </div>
   )
 }
