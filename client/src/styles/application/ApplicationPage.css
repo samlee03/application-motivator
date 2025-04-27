@@ -1,0 +1,33 @@
+.application-page {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.application-content {
+    width: 40vw;
+    text-align: center;
+}
+.application-progress-bar {
+    width: 100%;
+    height: 200px;
+}
+
+.application-content > h1 {
+    font-family: 'Days One', sans-serif;
+    font-weight: lighter;
+}
+.applications-display {
+    text-align: start;
+    color: rgb(201, 201, 201);
+
+}
+
+.no-applications {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Days One';
+}
+.no-application-link {
+    color: rgb(201, 201, 201);
+}
