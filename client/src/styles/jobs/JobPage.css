@@ -67,9 +67,9 @@
     width: 100%;
 }
 .job-display {
-    /* flex-grow: 1; */
     margin: 8px;
-    height: calc(100% - 16px);
+    flex-grow: 1;
+    height: 100%;
     background-color: #E8E7EF;
     /* background-color: red; */
     border-radius: 1rem;

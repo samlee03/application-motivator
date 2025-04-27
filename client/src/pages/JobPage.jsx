@@ -9,11 +9,27 @@ const JobPage = () => {
   // const [jobs, setJobs] = useState(null)
   const [jobs, setJobs] = useState(null);
   const [selected, setSelected] = useState(0);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredJobs, setFilteredJobs] = useState(null);
+  const filterJobs = () => {
+    if (!jobs || searchQuery.trim() === '') return jobs;
+
+    return jobs.filter(job => {
+      const lowerSearchQuery = searchQuery.toLowerCase();
+      return (
+        job.job_title.toLowerCase().includes(lowerSearchQuery)
+      );
+    });
+  };
+  const handleSearch = () => {
+    setFilteredJobs(filterJobs());
+  };
   useEffect(() => {
     const fetchJobs = async () => {
       const response = await fetch('http://localhost:5000/jobs')
       const data = await response.json();
       setJobs(data.documents);
+      setFilteredJobs(data.documents)
     }
     const loadingJobs = setTimeout(() =>{
       fetchJobs();
@@ -32,15 +48,15 @@ const JobPage = () => {
             </div>
             <div className="search-bar">
               <i>Filter</i>
-              <input type="text" placeholder="Search Job Title, Job Type, Job Level"/>
-              <i>Search</i>
+              <input type="text" onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search Job Title, Job Type, Job Level"/>
+              <i onClick={handleSearch}>Search</i>
             </div>
             <div className="job-page-results">
               <div className="job-cards-container">
-                {jobs.map((e, i) => {
+                {filteredJobs.map((e, i) => {
                   return (
                     <div key={i} onClick={() => setSelected(i)}>
-                      <SmallJobCard data={e}/>
+                      <SmallJobCard data={e} isSelected={selected == i}/>
                     </div>
                   )
                 })}
@@ -49,7 +65,7 @@ const JobPage = () => {
                 </div> */}
               </div>
               <div className="job-display">
-                <BigJobCard/>
+                <BigJobCard data={filteredJobs[selected]}/>
               </div>
 
             </div>
