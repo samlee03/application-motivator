@@ -28,15 +28,15 @@ function BigJobCard({data}) {
         <h2>About the job</h2>
         <div className="big-job-card-description">
             <p>
-            Figma is growing our team of passionate people on a mission to make design accessible to all. Born on the Web, Figma helps entire product teams brainstorm, design and build better products — from start to finish.
+              {data.missionStatement? data.missionStatement : `No info`}
             </p>
         </div>
       </div>
 
       <div>
-        <button className='apply-button'>Apply</button>
 
-      </div>
+        </div>
+      <button className='apply-button'>Apply</button>
     </div>
   )
 }

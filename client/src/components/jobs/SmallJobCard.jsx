@@ -2,7 +2,6 @@ import React from 'react'
 import "../../styles/jobs/SmallJobCard.css"
 const SmallJobCard = ({data, isSelected}) => {
   const job = data;
-  console.log(job);
   return (
     <div className={`small-job-card ${isSelected ? 'highlighted-card' : ''}`}>
         <div className="job-heading">
