@@ -93,8 +93,75 @@ app.post("/logout", async (_req, res) => {
     })
 });
 
-
-
+app.get("/api/applications", async (req, res) => {
+    try {
+      const token = req.headers.authorization?.split(' ')[1];
+      
+      if (!token) {
+        return res.status(401).json({ message: 'No token provided' });
+      }
+      
+      const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+      const userId = decoded.userId;
+      
+      const db = client.db('db');
+      const users = db.collection('users');
+      
+      const user = await users.findOne(
+        { _id: new ObjectId(userId) },
+        { projection: { applications: 1 } }
+      );
+      
+      res.status(200).json(user.applications || []);
+      
+    } catch (error) {
+      console.error("Error fetching applications:", error);
+      res.status(401).json({ message: 'Invalid token or server error' });
+    }
+})
+  
+  app.post("/api/applications", async (req, res) => {
+    try {
+      const token = req.headers.authorization?.split(' ')[1];
+      
+      if (!token) {
+        return res.status(401).json({ message: 'No token provided' });
+      }
+      
+      const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+      const userId = decoded.userId;
+      
+      const { jobTitle, company, postDate, location, salary, status = 'Applied' } = req.body;
+      
+      const db = client.db('db');
+      const users = db.collection('users');
+      
+      const newApplication = {
+        _id: new ObjectId(),
+        jobTitle,
+        company,
+        postDate,
+        location,
+        salary,
+        status,
+        appliedDate: new Date()
+      };
+      
+      const result = await users.updateOne(
+        { _id: new ObjectId(userId) },
+        { $push: { applications: newApplication } }
+      );
+      
+      res.status(201).json({
+        message: 'Application added successfully',
+        applicationId: newApplication._id
+      });
+      
+    } catch (error) {
+      console.error("Error adding application:", error);
+      res.status(401).json({ message: 'Invalid token or server error' });
+    }
+})
 
 
 
