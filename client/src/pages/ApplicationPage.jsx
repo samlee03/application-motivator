@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import "../styles/application/ApplicationPage.css"
 import ProgressBar from '../components/application/ProgressBar'
@@ -12,6 +12,27 @@ const ApplicationPage = () =>  {
   const handleSearch = (e) => {
     //
   }
+
+
+  // Load User - Applied Applications
+  useEffect(() => {
+    const getApplications = async () => {
+      console.log("fetching");
+      const token = localStorage.getItem('accessToken');
+      const response = await fetch('http://localhost:5000/api/applications', {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
+      });
+      
+      const data = await response.json();
+      
+      console.log(data);
+    }
+    getApplications();
+  }, [])
+
+  
   return (
     <div>
 

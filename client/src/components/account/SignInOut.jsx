@@ -44,7 +44,9 @@ function SignInOut({ type }) {
         await registerUser(email, password);
         navigate('/signin-page');
       } else {
-        await loginUser(email, password);
+        const response = await loginUser(email, password);
+        localStorage.setItem('accessToken', response.accessToken); // adds token to local storage
+
         navigate('/'); //goes to the dashboard or user profile in the future
       }
     } catch (err) {
