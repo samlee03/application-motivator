@@ -60,9 +60,7 @@ const JobPage = () => {
                     </div>
                   )
                 })}
-                {/* <div onClick={() => {console.log("clicked")}}>
-                  <SmallJobCard data={jobs[0]}/>
-                </div> */}
+
               </div>
               <div className="job-display">
                 <BigJobCard data={filteredJobs[selected]}/>

@@ -1,6 +1,5 @@
 .loading-bar-container {
     width: 100%;
-    /* border-radius: 50%; */
     overflow: hidden; 
     position: relative; 
     height: 200px;
@@ -23,8 +22,8 @@
     border-radius: 25%;
     height: 100%;
     width: 0%; 
-    border-radius: 20px 0 0 20px; /* Match container for smooth edges */
-    transition: width 0.75s ease-in-out; /* Smooth animation */
+    border-radius: 20px 0 0 20px; 
+    transition: width 0.75s ease-in-out; 
 }
 
 .progress-text {
@@ -44,9 +43,10 @@
     transform: translateX(-50%);
     top: -100px;
 
-    transition: left .75s ease-in-out; /* Smooth animation */
+    transition: left .75s ease-in-out;
 
 }
-.mask:hover {
-    left: calc(100%);
-}
+
+.mask.reset {
+    left: 100%;
+  }

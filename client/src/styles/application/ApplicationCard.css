@@ -1,0 +1,63 @@
+.application-card {
+    background-color: #FFFFFF;
+    /* height: 80px; */
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'DM Sans', sans-serif;
+    padding: 12px;
+    border-radius: 18px;
+    
+}
+
+.application_num {
+    text-align: center;
+    border-radius: 50%;
+    background-color: grey;
+    line-height: 0.8;
+    height: 12px;
+    padding: 8px;
+    width: 12px;
+    margin: 0;
+    color: #F5F4F0;
+    font-family: 'Days One';
+}
+.application-company {
+    color: black;
+    font-weight: bolder;
+    margin-left: 8px;
+}
+
+.application-status {
+    font-family: 'Days One';
+    padding: 4px 8px;
+    border-radius: 16px;
+    background-color: #485E92;
+    color: #F5F4F0;
+}
+.application-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.application-flex{
+    display: flex;
+    align-items: center;
+}
+.application-title {
+    color: black;
+    margin-left: 36px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.application-details{
+    color: #9D9D9D;
+    font-size: 15px;
+    font-weight: light;
+    margin: 10px 0 0 36px;
+}
+
+.accepted {
+    background-color: rgb(86, 138, 86);
+}

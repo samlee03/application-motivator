@@ -19,7 +19,7 @@ const Header = ({onPage}) => {
             <Link to="/resources-page" className={`nav-button ${onPage =="Resource" ? "blue" : ""}`}>
                 Resources
             </Link>
-            <img className="profile" src="https://placehold.co/45x45/png" alt="Profile" />
+            <img className="profile" src="https://placehold.co/45x45/fff/fff/png" alt="Profile" />
         </div>
     </div>
   );

@@ -3,7 +3,8 @@ import "../../styles/application/ProgressBar.css"
 import Mascot from '../../assets/images/mascot/fire_logo.png'
 const ProgressBar = ({completed, total}) => {
 
-    const progressWidth = (completed / total) * 100;
+    const progressWidth = Math.min((completed / total) * 100, 100);
+
     const maskLeft = (progressWidth - 100) + '%';
     const [isLoaded, setIsLoaded] = useState(false);
 

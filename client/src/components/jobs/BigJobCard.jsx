@@ -1,6 +1,43 @@
 import React from 'react'
 import "../../styles/jobs/BigJobCard.css"
 function BigJobCard({data}) {
+  const handleApply = async () => {
+    const token = localStorage.getItem('accessToken');
+    const currentApplicationsResponse = await fetch('http://localhost:5000/api/applications', {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    });
+    const currentApplications = await currentApplicationsResponse.json()
+    const isDuplicate = currentApplications.some(
+      (application) => application.jobTitle === data.job_title && application.company === data.company
+    );
+  
+    if (isDuplicate) {
+      console.log("You've already applied to this job.");
+      return;
+    }
+    const response = await fetch('http://localhost:5000/api/applications', 
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          jobTitle: data.job_title,
+          company : data.company,
+          salary: data.salary,
+          postDate: data.post_date,
+          location: data.location,
+        })
+      }
+    )
+    const job_data = await response.json();
+    console.log(job_data);
+  }
+
+
   return (
     <div className="big-job-card">
       <div className='big-job-card-content'>
@@ -36,7 +73,7 @@ function BigJobCard({data}) {
       <div>
 
         </div>
-      <button className='apply-button'>Apply</button>
+      <button onClick={handleApply} className='apply-button'>Apply</button>
     </div>
   )
 }

@@ -17,17 +17,27 @@
     font-weight: lighter;
 }
 .applications-display {
-    text-align: start;
-    color: rgb(201, 201, 201);
-
-}
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    width: 55vw;
+    margin: 0 auto;
+    padding: 50px;
+    justify-items: center; 
+  }
 
 .no-applications {
     margin-top: 50px;
     text-align: center;
     padding: 20px;
     font-family: 'Days One';
+    color: rgb(201, 201, 201);
 }
 .no-application-link {
     color: rgb(201, 201, 201);
+}
+.level-display {
+    font-size: 1.75rem;
+    font-family: 'Days One';
+    color: #485E92;
 }
