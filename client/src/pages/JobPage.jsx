@@ -26,7 +26,7 @@ const JobPage = () => {
   };
   useEffect(() => {
     const fetchJobs = async () => {
-      const response = await fetch('http://localhost:5000/jobs')
+      const response = await fetch('https://application-motivator-backend.onrender.com/jobs')
       const data = await response.json();
       setJobs(data.documents);
       setFilteredJobs(data.documents)

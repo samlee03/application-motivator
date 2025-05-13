@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://application-motivator-backend.onrender.com";
 
 export async function registerUser(email, password) {
   const response = await axios.post(`${API_URL}/register`, { email, password });

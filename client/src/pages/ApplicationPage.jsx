@@ -27,7 +27,7 @@ const ApplicationPage = () =>  {
     const getApplications = async () => {
       console.log("fetching");
       const token = localStorage.getItem('accessToken');
-      const response = await fetch('http://localhost:5000/api/applications', {
+      const response = await fetch('https://application-motivator-backend.onrender.com/api/applications', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },

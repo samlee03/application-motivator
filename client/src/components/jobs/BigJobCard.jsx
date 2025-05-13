@@ -3,7 +3,7 @@ import "../../styles/jobs/BigJobCard.css"
 function BigJobCard({data}) {
   const handleApply = async () => {
     const token = localStorage.getItem('accessToken');
-    const currentApplicationsResponse = await fetch('http://localhost:5000/api/applications', {
+    const currentApplicationsResponse = await fetch('https://application-motivator-backend.onrender.com/api/applications', {
       headers: {
         'Authorization': `Bearer ${token}`,
       },
@@ -17,7 +17,7 @@ function BigJobCard({data}) {
       console.log("You've already applied to this job.");
       return;
     }
-    const response = await fetch('http://localhost:5000/api/applications', 
+    const response = await fetch('https://application-motivator-backend.onrender.com/api/applications', 
       {
         method: 'POST',
         headers: {
