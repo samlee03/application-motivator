@@ -4,7 +4,7 @@
 }
 
 .Welcome{
-  background-image: url('/laptop.jpg');
+  background-image: url('/public/laptop.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
